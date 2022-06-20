@@ -5,12 +5,13 @@ console.log('ENV_VARS', process.env)
 // docs: http://karma-runner.github.io/6.3/config/configuration-file.html
 module.exports = function (config) {
   config.set({
-    browserNoActivityTimeout: 15 * 60 * 1000 + 1, // test timeout
-    browserSocketTimeout    : 15 * 60 * 1000 + 2, // test timeout
-    browserDisconnectTimeout: 15 * 60 * 1000 + 3, // test timeout
+    browserNoActivityTimeout  : 45 * 1000 + 1,
+    browserSocketTimeout      : 35 * 1000 + 2,
+    browserDisconnectTimeout  : 20 * 1000 + 3,
+    browserDisconnectTolerance: 2,
     // captureTimeout          : 60 * 1000 + 4,
-    // processKillTimeout      : 30 * 1000 + 5,
-    // pingTimeout             : 10 * 1000 + 6,
+    // processKillTimeout      : 17 * 1000 + 5,
+    // pingTimeout             : 20 * 1000 + 6,
 
     browsers: process.env.GITHUB_WORKFLOW
       ? (

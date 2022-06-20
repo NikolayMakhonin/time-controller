@@ -9,8 +9,9 @@ specifiers:
   '@babel/runtime-corejs3': 7.18.3
   '@flemist/copy-glob-flat': 0.0.5
   '@flemist/karma-custom-launcher': 0.0.0
-  '@flemist/test-utils': ^0.0.5
-  '@flemist/test-variants': 0.0.3
+  '@flemist/pairing-heap': ^0.0.0
+  '@flemist/test-utils': 0.0.5
+  '@flemist/test-variants': 0.0.6
   '@rollup/plugin-alias': 3.1.9
   '@rollup/plugin-babel': 5.3.1
   '@rollup/plugin-commonjs': 22.0.0
@@ -52,6 +53,7 @@ specifiers:
   typescript: ^4.7.4
 
 dependencies:
+  '@flemist/pairing-heap': 0.0.0
   tslib: 2.4.0
 
 devDependencies:
@@ -64,7 +66,7 @@ devDependencies:
   '@flemist/copy-glob-flat': 0.0.5
   '@flemist/karma-custom-launcher': 0.0.0
   '@flemist/test-utils': 0.0.5
-  '@flemist/test-variants': 0.0.3
+  '@flemist/test-variants': 0.0.6
   '@rollup/plugin-alias': 3.1.9_rollup@2.75.6
   '@rollup/plugin-babel': 5.3.1_zlefvkjd3mp2eij3mw2gs4aqfm
   '@rollup/plugin-commonjs': 22.0.0_rollup@2.75.6
@@ -1312,6 +1314,13 @@ packages:
       tslib: 2.4.0
     dev: true
 
+  /@flemist/pairing-heap/0.0.0:
+    resolution: {integrity: sha512-nDTvmWtSKd5iIIkidZMPL8wNc2PA4tTELSonFN5JA89e80b0vgWLCf8wUw+7VBeq93QfdbWc5qtQmwbrB7gtfA==}
+    engines: {node: '>=10.4.0', pnpm: ^7.1.6}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
+
   /@flemist/test-utils/0.0.5:
     resolution: {integrity: sha512-bc/7O57jhG1Br8c+Q+4PX7uamOMxRu4IPJJ3NoZYIrI6gDugYmuK9VRJiknvySxPmdFeYU3V+13sLFsFAmHFCA==}
     engines: {node: '>=10.4.0', pnpm: ^7.1.6}
@@ -1319,9 +1328,9 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /@flemist/test-variants/0.0.3:
-    resolution: {integrity: sha512-Bl1B29HYORTREnVvfKX5jK24sCSA+klKTldTu25kstiYAveRq2rK8cfjiP8q0wiIb2CiSu/yzgIWQ6t2GtOJrw==}
-    engines: {node: '>=9.3.0', pnpm: ^7.1.6}
+  /@flemist/test-variants/0.0.6:
+    resolution: {integrity: sha512-yiS00JaFoVWvn/J+S4EQ5BjRhkCqzq23Xdi/fxCMt5GtBdp9pgyIHkHJb3ZmczfjwVEBrZAApfxAVq8zP9m1xQ==}
+    engines: {node: '>=10.4.0', pnpm: ^7.1.6}
     dependencies:
       tslib: 2.4.0
     dev: true
