@@ -293,7 +293,7 @@ describe('time-controller > timeControllerMock', function () {
   })
 
   it('base', async function () {
-    this.timeout(1800000)
+    this.timeout(300000)
 
     const iterations = await testVariants({
       time3Timeout: [null, 0, 1, 2],
@@ -310,7 +310,7 @@ describe('time-controller > timeControllerMock', function () {
 
       times         : createTimes,
       expectedResult: createExpectedResult,
-      step1         : typeof window !== 'undefined' ? [null] : [null, 0, 1, 2],
+      step1         : [null, 0, 1, 2],
       step2         : [null, 0, 1, 2],
       step3         : [null, 0, 1, 2],
     })({
