@@ -308,7 +308,7 @@ describe('time-controller > timeControllerMock', function () {
 
       times         : createTimes,
       expectedResult: createExpectedResult,
-      step1         : [null],
+      step1         : [null, 0, 1, 2],
       step2         : [null, 0, 1, 2],
       step3         : [null, 0, 1, 2],
     })
