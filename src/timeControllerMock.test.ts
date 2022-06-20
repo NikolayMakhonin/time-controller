@@ -286,7 +286,7 @@ describe('time-controller > timeControllerMock', function () {
       times         : createTimes,
       expectedResult: createExpectedResult,
     })({
-      forceAwaitInterval: 5000,
+      pauseInterval: 5000,
     })
 
     console.log('iterations: ' + iterations)
@@ -314,7 +314,7 @@ describe('time-controller > timeControllerMock', function () {
       step2         : [null, 0, 1, 2],
       step3         : [null, 0, 1, 2],
     })({
-      forceAwaitInterval: 5000,
+      pauseInterval: 5000,
     })
 
     console.log('iterations: ' + iterations)
