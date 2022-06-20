@@ -9,6 +9,7 @@ specifiers:
   '@babel/runtime-corejs3': 7.18.3
   '@flemist/copy-glob-flat': 0.0.5
   '@flemist/karma-custom-launcher': 0.0.0
+  '@flemist/pairing-heap': ^0.0.0
   '@flemist/test-utils': ^0.0.5
   '@flemist/test-variants': 0.0.3
   '@rollup/plugin-alias': 3.1.9
@@ -52,6 +53,7 @@ specifiers:
   typescript: ^4.7.4
 
 dependencies:
+  '@flemist/pairing-heap': 0.0.0
   tslib: 2.4.0
 
 devDependencies:
@@ -1311,6 +1313,13 @@ packages:
       lodash: 4.17.21
       tslib: 2.4.0
     dev: true
+
+  /@flemist/pairing-heap/0.0.0:
+    resolution: {integrity: sha512-nDTvmWtSKd5iIIkidZMPL8wNc2PA4tTELSonFN5JA89e80b0vgWLCf8wUw+7VBeq93QfdbWc5qtQmwbrB7gtfA==}
+    engines: {node: '>=10.4.0', pnpm: ^7.1.6}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
 
   /@flemist/test-utils/0.0.5:
     resolution: {integrity: sha512-bc/7O57jhG1Br8c+Q+4PX7uamOMxRu4IPJJ3NoZYIrI6gDugYmuK9VRJiknvySxPmdFeYU3V+13sLFsFAmHFCA==}
