@@ -11,7 +11,7 @@ specifiers:
   '@flemist/karma-custom-launcher': 0.0.0
   '@flemist/pairing-heap': ^0.0.0
   '@flemist/test-utils': ^0.0.5
-  '@flemist/test-variants': 0.0.3
+  '@flemist/test-variants': 0.0.4
   '@rollup/plugin-alias': 3.1.9
   '@rollup/plugin-babel': 5.3.1
   '@rollup/plugin-commonjs': 22.0.0
@@ -66,7 +66,7 @@ devDependencies:
   '@flemist/copy-glob-flat': 0.0.5
   '@flemist/karma-custom-launcher': 0.0.0
   '@flemist/test-utils': 0.0.5
-  '@flemist/test-variants': 0.0.3
+  '@flemist/test-variants': 0.0.4
   '@rollup/plugin-alias': 3.1.9_rollup@2.75.6
   '@rollup/plugin-babel': 5.3.1_zlefvkjd3mp2eij3mw2gs4aqfm
   '@rollup/plugin-commonjs': 22.0.0_rollup@2.75.6
@@ -1328,9 +1328,9 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /@flemist/test-variants/0.0.3:
-    resolution: {integrity: sha512-Bl1B29HYORTREnVvfKX5jK24sCSA+klKTldTu25kstiYAveRq2rK8cfjiP8q0wiIb2CiSu/yzgIWQ6t2GtOJrw==}
-    engines: {node: '>=9.3.0', pnpm: ^7.1.6}
+  /@flemist/test-variants/0.0.4:
+    resolution: {integrity: sha512-inpYCahJ8h3jKeP6e+JF+lxe0BZvpHu2+LF8vHnT6GgTv35hHOV55dxX4Fbnib/ksmhPrmLKI+n9EIgwrKS4Rg==}
+    engines: {node: '>=10.4.0', pnpm: ^7.1.6}
     dependencies:
       tslib: 2.4.0
     dev: true

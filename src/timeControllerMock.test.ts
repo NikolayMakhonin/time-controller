@@ -1,4 +1,4 @@
-import {createTestVariants, createTestVariantsSync} from '@flemist/test-variants'
+import {createTestVariants} from '@flemist/test-variants'
 import {TimeControllerMock} from './timeControllerMock'
 import {ITimeController} from './contracts'
 import {timeControllerDefault} from './timeControllerDefault'
@@ -115,7 +115,7 @@ describe('time-controller > timeControllerMock', function () {
     return [times]
   }
 
-  const testVariants = createTestVariantsSync(({
+  const testVariants = createTestVariants(({
     times,
     step1,
     step2,
@@ -285,15 +285,17 @@ describe('time-controller > timeControllerMock', function () {
 
       times         : createTimes,
       expectedResult: createExpectedResult,
+    })({
+      forceAwaitInterval: 10000,
     })
 
     console.log('iterations: ' + iterations)
   })
 
-  it('base', function () {
+  it('base', async function () {
     this.timeout(900000)
 
-    const iterations = testVariants({
+    const iterations = await testVariants({
       time3Timeout: [null, 0, 1, 2],
       time3Start  : ({time3Timeout}) => time3Timeout == null ? [null] : [null, 0, 1, 2],
       time3Abort  : ({time3Timeout}) => time3Timeout == null ? [null] : [null, -1, 0, 1, 2],
@@ -311,6 +313,8 @@ describe('time-controller > timeControllerMock', function () {
       step1         : [null, 0, 1, 2],
       step2         : [null, 0, 1, 2],
       step3         : [null, 0, 1, 2],
+    })({
+      forceAwaitInterval: 10000,
     })
 
     console.log('iterations: ' + iterations)
