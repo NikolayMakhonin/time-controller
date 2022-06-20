@@ -293,7 +293,7 @@ describe('time-controller > timeControllerMock', function () {
   })
 
   it('base', async function () {
-    this.timeout(300000)
+    this.timeout(600000)
 
     const iterations = await testVariants({
       time3Timeout: [null, 0, 1, 2],
