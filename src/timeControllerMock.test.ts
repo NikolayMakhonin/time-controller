@@ -310,7 +310,7 @@ describe('time-controller > timeControllerMock', function () {
       expectedResult: createExpectedResult,
       step1         : [null],
       step2         : [null],
-      step3         : [null],
+      step3         : [null, 0, 1, 2],
     })
 
     console.log('iterations: ' + iterations)
