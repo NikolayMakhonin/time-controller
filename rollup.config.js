@@ -92,7 +92,7 @@ const nodeConfig = ({
     }),
   ],
   onwarn  : onwarnRollup,
-  external: ['assets']
+  external: []
     .concat(Object.keys(pkg.dependencies))
     .concat(Object.keys(pkg.devDependencies))
     .concat(require('module').builtinModules || Object.keys(process.binding('natives'))),
