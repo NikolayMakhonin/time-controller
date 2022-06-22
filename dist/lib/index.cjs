@@ -2,8 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var timeControllerDefault = require('./timeControllerDefault2.cjs');
-var timeControllerMock = require('./timeControllerMock2.cjs');
+var timeControllerDefault = require('./timeControllerDefault.cjs');
+var timeControllerMock = require('./timeControllerMock.cjs');
 require('@flemist/pairing-heap');
 
 

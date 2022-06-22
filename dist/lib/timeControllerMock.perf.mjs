@@ -1,6 +1,6 @@
 import { __awaiter } from 'tslib';
 import { calcPerformance } from 'rdtsc';
-import { T as TimeControllerMock } from './timeControllerMock2.mjs';
+import { TimeControllerMock } from './timeControllerMock.mjs';
 import '@flemist/pairing-heap';
 
 describe('time-controller > timeControllerMock perf', function () {

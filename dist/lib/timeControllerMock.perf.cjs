@@ -2,7 +2,7 @@
 
 var tslib = require('tslib');
 var rdtsc = require('rdtsc');
-var timeControllerMock = require('./timeControllerMock2.cjs');
+var timeControllerMock = require('./timeControllerMock.cjs');
 require('@flemist/pairing-heap');
 
 describe('time-controller > timeControllerMock perf', function () {

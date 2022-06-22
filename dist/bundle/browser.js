@@ -6,7 +6,7 @@ return e.apply(window,arguments)},
 clearTimeout:"undefined"==typeof window?clearTimeout:function(){
 return n.apply(window,arguments)}}
 ;function o(t,e){return t<e}class l{
-constructor({objectPool:t,lessThanFunc:e}){
+constructor({objectPool:t,lessThanFunc:e}={}){
 this._size=0,this._root=null,this.merge=r,
 this.collapse=s,this._objectPool=t,this._lessThanFunc=e||o
 }clear(){this._root=null,this._size=0}get size(){

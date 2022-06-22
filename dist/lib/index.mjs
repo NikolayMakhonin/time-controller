@@ -1,3 +1,3 @@
-export { t as timeControllerDefault } from './timeControllerDefault2.mjs';
-export { T as TimeControllerMock } from './timeControllerMock2.mjs';
+export { timeControllerDefault } from './timeControllerDefault.mjs';
+export { TimeControllerMock } from './timeControllerMock.mjs';
 import '@flemist/pairing-heap';
