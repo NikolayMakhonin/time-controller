@@ -5,27 +5,6 @@
   "main": "dist/lib/index.cjs",
   "module": "dist/lib/index.mjs",
   "types": "dist/lib/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./dist/lib/index.d.ts",
-      "import": "./dist/lib/index.mjs",
-      "require": "./dist/lib/index.cjs",
-      "browser": {
-        "import": "./dist/lib/index.mjs",
-        "require": "./dist/lib/index.cjs"
-      },
-      "node": {
-        "import": "./dist/lib/index.mjs",
-        "require": "./dist/lib/index.cjs"
-      }
-    },
-    "./register": {
-      "types": "./dist/lib/register/register.d.ts",
-      "import": "./dist/lib/register/register.mjs",
-      "require": "./dist/lib/register/register.cjs"
-    }
-  },
   "engines": {
     "node": ">=10.4.0",
     "pnpm": "^7.1.6"
@@ -35,11 +14,10 @@
     "url": "git+https://github.com/NikolayMakhonin/time-controller.git"
   },
   "keywords": [
-    "test",
-    "variants",
-    "combinations",
-    "enumeration",
-    "helper"
+    "setTimeout",
+    "time",
+    "mock",
+    "test"
   ],
   "author": {
     "name": "Nikolay Makhonin",
@@ -60,8 +38,7 @@
     "lint:fix": "eslint --fix ./**/*.{js,cjs,mjs,ts,tsx}",
     "lint:wizard": "eslint-nibble --cache --multi ./**/*.{js,cjs,mjs,ts,tsx}",
     "build:js": "rimraf dist/lib && cpy \"**/assets/**\" \"../dist/lib/\" --parents --cwd=src && rollup -c",
-    "build:types": "tsc --outDir dist/lib --declaration",
-    "build": "rimraf dist && pnpm run build:js && pnpm run build:types",
+    "build": "rimraf dist && pnpm run build:js",
     "coverage:merge": "rimraf tmp/coverage/{all,merge} && cp-flat \"tmp/coverage/*/json/**/*.json\" \"tmp/coverage/merge\" && nyc report -r lcov --report-dir tmp/coverage/all/lcov --temp-dir \"tmp/coverage/merge/\"",
     "coverage:check": "pnpm run coverage:merge && nyc check-coverage --report-dir tmp/coverage/all/lcov --lines 50 --functions 50 --branches 50 --statements 50",
     "test:mocha": "mocha ./src/**/*.test.*",
@@ -80,8 +57,8 @@
     "@babel/runtime-corejs3": "7.18.3",
     "@flemist/copy-glob-flat": "0.0.5",
     "@flemist/karma-custom-launcher": "0.0.0",
-    "@flemist/test-utils": "0.0.6",
-    "@flemist/test-variants": "0.0.10",
+    "@flemist/test-utils": "0.0.7",
+    "@flemist/test-variants": "0.0.14",
     "@rollup/plugin-alias": "3.1.9",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-commonjs": "=21.1.0",
@@ -95,7 +72,8 @@
     "@types/fs-extra": "9.0.13",
     "@types/mocha": "9.1.1",
     "@types/node": "18.0.0",
-    "cpy-cli": "3.1.1",
+    "@zerollup/ts-transform-paths": "1.7.18",
+    "cpy-cli": "=3.1.1",
     "eslint": "8.18.0",
     "eslint-config-pro": "3.0.14",
     "fs-extra": "10.1.0",
@@ -111,7 +89,7 @@
     "nyc": "15.1.0",
     "rdtsc": "2.0.0",
     "rimraf": "3.0.2",
-    "rollup": "2.75.6",
+    "rollup": "2.75.7",
     "rollup-plugin-delete": "2.0.0",
     "rollup-plugin-istanbul": "3.0.0",
     "rollup-plugin-multi-input": "1.3.1",

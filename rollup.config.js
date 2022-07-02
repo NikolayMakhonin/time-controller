@@ -11,6 +11,7 @@ import polyfills from 'rollup-plugin-node-polyfills'
 import inject from '@rollup/plugin-inject'
 import babel from '@rollup/plugin-babel'
 import istanbul from 'rollup-plugin-istanbul'
+import tsTransformPaths from '@zerollup/ts-transform-paths'
 import nycrc from './nyc.config.mjs'
 import { terser } from 'rollup-plugin-terser'
 import path from 'path'
@@ -88,7 +89,19 @@ const nodeConfig = ({
       transformMixedEsModules: true,
     }),
     typescript({
-      sourceMap: dev,
+      sourceMap     : dev,
+      declarationDir: outputDir,
+      declaration   : true,
+      transformers  : {
+        afterDeclarations: [
+          {
+            type   : 'program',
+            factory: (program) => {
+              return tsTransformPaths(program).afterDeclarations
+            },
+          },
+        ],
+      },
     }),
   ],
   onwarn  : onwarnRollup,
@@ -156,7 +169,6 @@ const browserTestsConfig = {
     'node_modules/@flemist/test-utils/dist/lib/register/show-useragent.mjs',
     'node_modules/@flemist/test-utils/dist/lib/register/register.mjs',
     'src/**/*.test.ts',
-    '!**/-deprecated/**',
   ],
   output: {
     dir      : 'dist/bundle',
@@ -200,7 +212,6 @@ const browserTestsConfig = {
       babelHelpers: 'runtime',
       exclude     : [
         '**/node_modules/rollup*/**',
-        '**/node_modules/tslib/**',
         '**/node_modules/@babel/**',
         '**/node_modules/core-js*/**',
       ],

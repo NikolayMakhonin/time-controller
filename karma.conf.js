@@ -135,6 +135,22 @@ module.exports = function (config) {
         },
         ENV_CMD: null,
       },
+      LocalChromium49: {
+        base       : 'Custom',
+        parent     : 'ChromiumHeadless',
+        displayName: 'Chromium 49.0.2623.112',
+        flags      : [
+          '--incognito',
+          '--no-sandbox',
+          '--disable-web-security',
+          '--allow-cross-origin-auth-prompt',
+          '--disable-site-isolation-trials',
+        ],
+        DEFAULT_CMD: {
+          win32: 'E:/Program Files (x86)/Chromium/49.0.2623.112/chrome.exe',
+        },
+        ENV_CMD: null,
+      },
     },
   })
 }

@@ -2,6 +2,7 @@
 /dist/**/*.test.*
 /tmp/
 /node_modules/
+/*.log
 
 /.eslintcache
 /package-lock.json
