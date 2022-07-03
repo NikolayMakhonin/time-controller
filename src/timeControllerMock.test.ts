@@ -285,9 +285,7 @@ describe('time-controller > timeControllerMock', function () {
 
       times         : createTimes,
       expectedResult: createExpectedResult,
-    })({
-      pauseInterval: 1000,
-    })
+    })()
 
     console.log('iterations: ' + iterations)
   })
@@ -313,9 +311,7 @@ describe('time-controller > timeControllerMock', function () {
       step1         : [null, 0, 1, 2],
       step2         : [null, 0, 1, 2],
       step3         : [null, 0, 1, 2],
-    })({
-      pauseInterval: 1000,
-    })
+    })()
 
     console.log('iterations: ' + iterations)
   })
