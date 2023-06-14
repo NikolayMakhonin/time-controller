@@ -1,13 +1,12 @@
 {
   "name": "@flemist/time-controller",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "setTimeout and Date.now() mock for fast testing",
   "main": "dist/lib/index.cjs",
   "module": "dist/lib/index.mjs",
   "types": "dist/lib/index.d.ts",
   "engines": {
-    "node": ">=10.4.0",
-    "pnpm": "^7.1.6"
+    "node": ">=10.4.0"
   },
   "repository": {
     "type": "git",
@@ -32,12 +31,12 @@
     "access": "public"
   },
   "scripts": {
-    "prepublishOnly": "pnpm run audit && pnpm run lint && pnpm run build && pnpm run test:mocha:ci && pnpm run test:karma",
+    "_prepublishOnly": "pnpm run audit && pnpm run lint && pnpm run build && pnpm run test:mocha:ci && pnpm run test:karma",
     "audit": "pnpm audit --prod",
     "lint": "eslint ./**/*.{js,cjs,mjs,ts,tsx}",
     "lint:fix": "eslint --fix ./**/*.{js,cjs,mjs,ts,tsx}",
     "lint:wizard": "eslint-nibble --cache --multi ./**/*.{js,cjs,mjs,ts,tsx}",
-    "build:js": "rimraf dist/lib && cpy \"**/assets/**\" \"../dist/lib/\" --parents --cwd=src && rollup -c",
+    "build:js": "rimraf dist/lib && cpy \"**/assets/**\" \"**/*.{js,cjs,mjs}\" \"../dist/lib/\" --parents --cwd=src && rollup -c",
     "build": "rimraf dist && pnpm run build:js",
     "coverage:merge": "rimraf tmp/coverage/{all,merge} && cp-flat \"tmp/coverage/*/json/**/*.json\" \"tmp/coverage/merge\" && nyc report -r lcov --report-dir tmp/coverage/all/lcov --temp-dir \"tmp/coverage/merge/\"",
     "coverage:check": "pnpm run coverage:merge && nyc check-coverage --report-dir tmp/coverage/all/lcov --lines 50 --functions 50 --branches 50 --statements 50",
@@ -57,8 +56,8 @@
     "@babel/runtime-corejs3": "7.18.3",
     "@flemist/copy-glob-flat": "0.0.5",
     "@flemist/karma-custom-launcher": "0.0.0",
-    "@flemist/test-utils": "0.0.7",
-    "@flemist/test-variants": "0.0.14",
+    "@flemist/test-utils": "0.0.9",
+    "@flemist/test-variants": "0.0.16",
     "@rollup/plugin-alias": "3.1.9",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-commonjs": "=21.1.0",
@@ -68,6 +67,7 @@
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-replace": "4.0.0",
     "@rollup/plugin-typescript": "8.3.3",
+    "@rollup/pluginutils": "4.2.1",
     "@types/assert": "1.5.6",
     "@types/fs-extra": "9.0.13",
     "@types/mocha": "9.1.1",
@@ -75,7 +75,7 @@
     "@zerollup/ts-transform-paths": "1.7.18",
     "cpy-cli": "=3.1.1",
     "eslint": "8.18.0",
-    "eslint-config-pro": "3.0.14",
+    "eslint-config-pro": "3.0.16",
     "fs-extra": "10.1.0",
     "globby": "=11.1.0",
     "karma": "6.4.0",
@@ -87,7 +87,7 @@
     "mocha": "9.2.2",
     "nodemon": "2.0.16",
     "nyc": "15.1.0",
-    "rdtsc": "2.0.0",
+    "rdtsc": "3.0.3",
     "rimraf": "3.0.2",
     "rollup": "2.75.7",
     "rollup-plugin-delete": "2.0.0",
