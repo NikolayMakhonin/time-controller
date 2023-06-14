@@ -1,6 +1,6 @@
 {
   "name": "@flemist/time-controller",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "setTimeout and Date.now() mock for fast testing",
   "main": "dist/lib/index.cjs",
   "module": "dist/lib/index.mjs",
@@ -100,7 +100,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@flemist/pairing-heap": "^0.0.1",
+    "@flemist/pairing-heap": "^0.0.8",
     "tslib": "^2.4.0"
   }
 }
