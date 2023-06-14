@@ -31,7 +31,7 @@
     "access": "public"
   },
   "scripts": {
-    "_prepublishOnly": "pnpm run audit && pnpm run lint && pnpm run build && pnpm run test:mocha:ci && pnpm run test:karma",
+    "prepublishOnly": "pnpm run audit && pnpm run lint && pnpm run build && pnpm run test:mocha:ci && pnpm run test:karma",
     "audit": "pnpm audit --prod",
     "lint": "eslint ./**/*.{js,cjs,mjs,ts,tsx}",
     "lint:fix": "eslint --fix ./**/*.{js,cjs,mjs,ts,tsx}",
