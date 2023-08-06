@@ -1,6 +1,6 @@
 {
   "name": "@flemist/time-controller",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "setTimeout and Date.now() mock for fast testing",
   "main": "dist/lib/index.cjs",
   "module": "dist/lib/index.mjs",
@@ -87,7 +87,7 @@
     "mocha": "9.2.2",
     "nodemon": "2.0.16",
     "nyc": "15.1.0",
-    "rdtsc": "3.0.3",
+    "rdtsc": "3.0.4",
     "rimraf": "3.0.2",
     "rollup": "2.75.7",
     "rollup-plugin-delete": "2.0.0",
@@ -100,7 +100,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@flemist/pairing-heap": "^0.0.8",
+    "@flemist/pairing-heap": "^1.0.0",
     "tslib": "^2.4.0"
   }
 }
