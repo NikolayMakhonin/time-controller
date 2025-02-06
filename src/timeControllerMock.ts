@@ -2,8 +2,8 @@ import {ITimeController} from './contracts'
 import {PairingHeap, PairingNode} from '@flemist/pairing-heap'
 
 interface IHandle {
-	id: number,
-	time: number,
+  id: number,
+  time: number,
   callback: () => void,
 }
 
@@ -37,6 +37,10 @@ export class TimeControllerMock implements ITimeController<PairingNode<IHandle>>
 
   get queueSize(): number {
     return this._handles.size
+  }
+
+  get nextQueuedTime(): number | null {
+    return this._handles.getMin()?.time ?? null
   }
 
   addTime(time: number) {
