@@ -30,6 +30,10 @@ class TimeControllerMock {
     get queueSize() {
         return this._handles.size;
     }
+    get nextQueuedTime() {
+        var _a, _b;
+        return (_b = (_a = this._handles.getMin()) === null || _a === void 0 ? void 0 : _a.time) !== null && _b !== void 0 ? _b : null;
+    }
     addTime(time) {
         this.setTime(this._now + time);
     }

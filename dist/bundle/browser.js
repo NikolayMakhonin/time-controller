@@ -1,17 +1,11 @@
 !function(e){"use strict";var t=function(){
-function e(){this._handles=new Set}
-return e.prototype.now=function(){
+function e(){}return e.prototype.now=function(){
 return Date.now()
-},Object.defineProperty(e.prototype,"queueSize",{
-get:function(){return this._handles.size},
-enumerable:!1,configurable:!0
-}),e.prototype.setTimeout=function(e,t){
-var n=this,i=setTimeout((function(){
-n._handles.delete(i),e()}),t)
-;return this._handles.add(i),e
+},e.prototype.setTimeout=function(e,t){
+return setTimeout(e,t)
 },e.prototype.clearTimeout=function(e){
-clearTimeout(e),this._handles.delete(e)},e
-}(),n=new t;function i(e,t){return e<t}class o{
+clearTimeout(e)},e}(),n=new t;function i(e,t){
+return e<t}class o{
 constructor({objectPool:e,lessThanFunc:t}={}){
 this._size=0,this._root=null,this.merge=l,
 this.collapse=r,this._objectPool=e,this._lessThanFunc=t||i
@@ -64,6 +58,10 @@ lessThanFunc:s})}
 return Object.defineProperty(e.prototype,"queueSize",{
 get:function(){return this._handles.size},
 enumerable:!1,configurable:!0
+}),Object.defineProperty(e.prototype,"nextQueuedTime",{
+get:function(){var e,t
+;return null!==(t=null===(e=this._handles.getMin())||void 0===e?void 0:e.time)&&void 0!==t?t:null
+},enumerable:!1,configurable:!0
 }),e.prototype.addTime=function(e){
 this.setTime(this._now+e)
 },e.prototype.setTime=function(e){
