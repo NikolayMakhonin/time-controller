@@ -25,3 +25,5 @@ export class TimeControllerDefault implements ITimeController {
     this._handles.delete(handle)
   }
 }
+
+export const timeControllerDefault = new TimeControllerDefault()
