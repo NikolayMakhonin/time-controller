@@ -8,5 +8,6 @@ require('@flemist/pairing-heap');
 
 
 
+exports.TimeControllerDefault = timeControllerDefault.TimeControllerDefault;
 exports.timeControllerDefault = timeControllerDefault.timeControllerDefault;
 exports.TimeControllerMock = timeControllerMock.TimeControllerMock;

@@ -27,6 +27,9 @@ class TimeControllerMock {
             lessThanFunc: lessThanHandles,
         });
     }
+    get queueSize() {
+        return this._handles.size;
+    }
     addTime(time) {
         this.setTime(this._now + time);
     }

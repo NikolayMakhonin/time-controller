@@ -10,6 +10,7 @@ export declare class TimeControllerMock implements ITimeController<PairingNode<I
     private _now;
     private _nextId;
     constructor();
+    get queueSize(): number;
     addTime(time: number): void;
     setTime(time: number): void;
     now(): number;
