@@ -35,6 +35,10 @@ export class TimeControllerMock implements ITimeController<PairingNode<IHandle>>
     })
   }
 
+  get queueSize(): number {
+    return this._handles.size
+  }
+
   addTime(time: number) {
     this.setTime(this._now + time)
   }

@@ -1,20 +1,27 @@
 import {ITimeController} from './contracts'
 
-const _setTimeout = setTimeout
-const _clearTimeout = clearTimeout
+export class TimeControllerDefault implements ITimeController {
+  private readonly _handles: Set<any> = new Set()
 
-export const timeControllerDefault: ITimeController = {
-  now: function now() {
+  now(): number {
     return Date.now()
-  },
-  setTimeout: typeof window === 'undefined'
-    ? setTimeout
-    : function setTimeout() {
-      return _setTimeout.apply(window, arguments)
-    },
-  clearTimeout: typeof window === 'undefined'
-    ? clearTimeout
-    : function clearTimeout() {
-      return _clearTimeout.apply(window, arguments)
-    },
+  }
+
+  get queueSize(): number {
+    return this._handles.size
+  }
+
+  setTimeout(handler: () => void, timeout: number): any {
+    const handle = setTimeout(() => {
+      this._handles.delete(handle)
+      handler()
+    }, timeout)
+    this._handles.add(handle)
+    return handler
+  }
+
+  clearTimeout(handle: any): void {
+    clearTimeout(handle)
+    this._handles.delete(handle)
+  }
 }
