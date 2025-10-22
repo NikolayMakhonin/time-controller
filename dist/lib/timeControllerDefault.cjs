@@ -3,8 +3,16 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 class TimeControllerDefault {
+    constructor() {
+        this._nowUnique = 0;
+    }
     now() {
-        return Date.now();
+        return Math.max(this._nowUnique, Date.now());
+    }
+    nowUnique() {
+        const next = this.now() + 1;
+        this._nowUnique = next;
+        return next;
     }
     setTimeout(handler, timeout) {
         return setTimeout(handler, timeout);

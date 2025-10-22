@@ -1,6 +1,8 @@
 import { ITimeController } from './contracts';
 export declare class TimeControllerDefault implements ITimeController {
+    private _nowUnique;
     now(): number;
+    nowUnique(): number;
     setTimeout(handler: () => void, timeout: number): any;
     clearTimeout(handle: any): void;
 }

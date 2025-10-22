@@ -22,6 +22,7 @@ function lessThanHandles(o1, o2) {
 class TimeControllerMock {
     constructor() {
         this._now = 1;
+        this._nowUnique = 0;
         this._nextId = 0;
         this._handles = new pairingHeap.PairingHeap({
             lessThanFunc: lessThanHandles,
@@ -54,7 +55,12 @@ class TimeControllerMock {
         this._now = time;
     }
     now() {
-        return this._now;
+        return Math.max(this._nowUnique, this._now);
+    }
+    nowUnique() {
+        const next = this.now() + 1;
+        this._nowUnique = next;
+        return next;
     }
     setTimeout(callback, timeout) {
         const node = this._handles.add(Object.freeze({
