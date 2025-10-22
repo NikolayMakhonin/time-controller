@@ -4,11 +4,11 @@ export class TimeControllerDefault implements ITimeController {
   private _nowUnique: number = 0
   
   now(): number {
-    return Date.now()
+    return Math.max(this._nowUnique, Date.now())
   }
   
   nowUnique(): number {
-    const next = Math.max(this._nowUnique, this.now()) + 1
+    const next = this.now() + 1
     this._nowUnique = next
     return next
   }

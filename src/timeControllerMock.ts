@@ -71,11 +71,11 @@ export class TimeControllerMock implements ITimeController<PairingNode<IHandle>>
   }
 
   now(): number {
-    return this._now
+    return Math.max(this._nowUnique, this._now)
   }
 
   nowUnique(): number {
-    const next = Math.max(this._nowUnique, this._now) + 1
+    const next = this.now() + 1
     this._nowUnique = next
     return next
   }
