@@ -48,12 +48,12 @@
     "coveralls": "pnpm run coverage:check && nyc report --reporter=text-lcov --temp-dir \"tmp/coverage/merge/\" | coveralls"
   },
   "devDependencies": {
-    "@babel/core": "7.18.5",
+    "@babel/core": "7.28.4",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
-    "@babel/plugin-transform-classes": "7.18.4",
-    "@babel/plugin-transform-runtime": "7.18.5",
-    "@babel/preset-env": "7.18.2",
-    "@babel/runtime-corejs3": "7.18.3",
+    "@babel/plugin-transform-classes": "7.28.4",
+    "@babel/plugin-transform-runtime": "7.28.3",
+    "@babel/preset-env": "7.28.3",
+    "@babel/runtime-corejs3": "7.28.4",
     "@flemist/copy-glob-flat": "0.0.5",
     "@flemist/karma-custom-launcher": "0.0.0",
     "@flemist/test-utils": "0.0.9",
