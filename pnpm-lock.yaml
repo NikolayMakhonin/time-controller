@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@flemist/abort-controller-fast':
-        specifier: 1.0.0
-        version: 1.0.0
       '@flemist/pairing-heap':
         specifier: ^1.0.0
         version: 1.0.0
@@ -90,12 +87,6 @@ importers:
       '@types/node':
         specifier: 18.0.0
         version: 18.0.0
-      '@typescript-eslint/eslint-plugin':
-        specifier: 5.29.0
-        version: 5.29.0(@typescript-eslint/parser@5.29.0(eslint@8.18.0)(typescript@4.9.5))(eslint@8.18.0)(typescript@4.9.5)
-      '@typescript-eslint/parser':
-        specifier: 5.29.0
-        version: 5.29.0(eslint@8.18.0)(typescript@4.9.5)
       '@zerollup/ts-transform-paths':
         specifier: 1.7.18
         version: 1.7.18(typescript@4.9.5)
@@ -108,12 +99,6 @@ importers:
       eslint-config-pro:
         specifier: 3.0.16
         version: 3.0.16(eslint@8.18.0)(typescript@4.9.5)
-      eslint-plugin-import:
-        specifier: 2.26.0
-        version: 2.26.0(@typescript-eslint/parser@5.29.0(eslint@8.18.0)(typescript@4.9.5))(eslint@8.18.0)
-      eslint-plugin-node:
-        specifier: 11.1.0
-        version: 11.1.0(eslint@8.18.0)
       fs-extra:
         specifier: 10.1.0
         version: 10.1.0
@@ -748,9 +733,6 @@ packages:
 
   '@flemist/abort-controller-fast@0.0.5':
     resolution: {integrity: sha512-ewpqfmNx+V5dqTzVBxi7syhhsFRk5ktNOd0d85tKyGkqwzoMyJSYGBPmycYhlUDSsIN/3Nb2EaE0tPOtfw6PNQ==}
-
-  '@flemist/abort-controller-fast@1.0.0':
-    resolution: {integrity: sha512-umA3lbp5W025xc410C2zRbYcUkUDIW47s2TreONwzVmuekzmmRmvQ0IEmDO5aYIjU9QDnI4X0NZ+Yh5ELj6raQ==}
 
   '@flemist/copy-glob-flat@0.0.5':
     resolution: {integrity: sha512-nw2x3zS78uRv7jlR709oXiMXhtTlTS2+WJiy3aTabcayv50CNHMKXevv9WR7YjUJzS7743EdPJl5wAKjIq9Fdg==}
@@ -4511,10 +4493,6 @@ snapshots:
       - supports-color
 
   '@flemist/abort-controller-fast@0.0.5':
-    dependencies:
-      tslib: 2.8.1
-
-  '@flemist/abort-controller-fast@1.0.0':
     dependencies:
       tslib: 2.8.1
 
