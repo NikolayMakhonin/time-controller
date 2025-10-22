@@ -1,8 +1,16 @@
 import {ITimeController} from './contracts'
 
 export class TimeControllerDefault implements ITimeController {
+  private _nowUnique: number = 0
+  
   now(): number {
     return Date.now()
+  }
+  
+  nowUnique(): number {
+    const next = Math.max(this._nowUnique, this.now()) + 1
+    this._nowUnique = next
+    return next
   }
 
   setTimeout(handler: () => void, timeout: number): any {

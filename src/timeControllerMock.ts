@@ -27,6 +27,7 @@ function lessThanHandles(o1: IHandle, o2: IHandle): boolean {
 export class TimeControllerMock implements ITimeController<PairingNode<IHandle>> {
   private readonly _handles: PairingHeap<IHandle>
   private _now: number = 1
+  private _nowUnique: number = 0
   private _nextId: number = 0
 
   constructor() {
@@ -71,6 +72,12 @@ export class TimeControllerMock implements ITimeController<PairingNode<IHandle>>
 
   now(): number {
     return this._now
+  }
+
+  nowUnique(): number {
+    const next = Math.max(this._nowUnique, this._now) + 1
+    this._nowUnique = next
+    return next
   }
 
   setTimeout(callback: () => void, timeout: number): PairingNode<IHandle> {

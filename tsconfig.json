@@ -23,6 +23,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
+    "importsNotUsedAsValues": "remove",
+    "preserveValueImports": false,
     "newLine": "LF",
     "typeRoots": [
       "node_modules/@types",
