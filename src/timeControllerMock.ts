@@ -1,5 +1,5 @@
 import {ITimeController} from './contracts'
-import {PairingHeap, PairingNode} from '@flemist/pairing-heap'
+import {PairingHeap, type PairingNode} from '@flemist/pairing-heap'
 
 interface IHandle {
   id: number,
