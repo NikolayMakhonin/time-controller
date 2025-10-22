@@ -1,6 +1,6 @@
 {
   "name": "@flemist/time-controller",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "setTimeout and Date.now() mock for fast testing",
   "main": "dist/lib/index.cjs",
   "module": "dist/lib/index.mjs",
